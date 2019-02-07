@@ -1,5 +1,5 @@
 .container-fluid {
-    background-image: url('img/banner5.jpg');
+    background-image: url('img/backgrounds/banner5.jpg');
     height: -webkit-fill-available;
     max-height: 1200px;
     min-height: 850px;
@@ -90,7 +90,7 @@
 @media (max-width: 768px) {
     .container-fluid {
 
-        background-image: url('img/banner5.jpg');
+        background-image: url('img/backgrounds/banner5.jpg');
         height: -webkit-fill-available;
         min-height: 1300px;
         padding: 0px;

@@ -1,27 +1,104 @@
 # hasteWeihnacht Markdown Dokumentation
-<br>
+
 Link zur Seite:
 `https://hasteweihnacht.firebaseapp.com/`
 
 ## Folders & Files
 
-**root Verzeichnis** | **css** | **js** | **img** |
--------- | -------- | -------- | -------|
-index.html | style.css   | customer.js | diverse Bilder  |
-seller.html  | styleseller.css   |
-farmmanager.html | stylefarm.css | 
-emailverify.html | styleemailverify.css |
-registration.html | stylereg.css |
-team.html | styleteam.css
-productoffer.html| img folder
-productmanager.html |
-inprogress.html | 
-database.rules.json |
-deploy.sh |
-firebase.json |
-submit.sh |
-validate. sh |
-
+```
+root/
+|-css/
+|  |--img/
+|  |   |---backgrounds/
+|  |   |      backgroundoffer.jpg
+|  |   |      banner5.jpg
+|  |   |      inprogress.jpg
+|  |   |      productmanagerbackground.jpg
+|  |   |      productmanagerbackgroundmr.jpg
+|  |   |      shoppingtrolley.svg
+|  |   |
+|  |   |---form_icons/
+|  |   |       mailIcon.png
+|  |   |       mobileIcon.png
+|  |   |       nameIcon.png
+|  |   |       passIcon.png
+|  |   |
+|  |   |---team_img/
+|  |           ali.jpg
+|  |           etti.jpg
+|  |           steffen.jpg
+|  |           
+|  |--style.css
+|  |--styleemailverify.css
+|  |--stylefarm.css
+|  |--stylreg.css
+|  |--styleseller.css
+|  |--styleteam.css
+|  
+|-img/
+|  |--acc_management_icons/
+|  |    addproduct.svg
+|  |    change.svg
+|  |    changeproduct.svg
+|  |    delete.svg
+|  |    farm.svg
+|  |    foodbasket.svg
+|  |    product.svg
+|  |    productchange.svg
+|  |    shoppingtrolley.svg
+|  |    turnover.svg
+|  |
+|  |--product_examples/
+|  |    1.jpeg
+|  |    2.jpeg
+|  |    3.jpeg
+|  |    4.jpeg
+|  |    5.jpeg
+|  |    6.jpeg
+|  |    7.jpeg
+|  |    8.jpeg
+|  |    9.jpeg
+|  |    10.jpeg
+|  |    11.jpeg
+|  |    12.jpeg
+|  |    13.jpeg
+|  |    14.jpeg
+|  |    15.jpeg
+|  |    16.jpeg
+|  |    17.jpeg
+|  |    18.jpeg
+|  |
+|  |--social_logos/
+|  |    facebook.png
+|  |    facebookloginws.png
+|  |    googleloginws.png
+|  |    instagram.png
+|  |    instaloginws.png
+|  |    twitter.png
+|  |    twitterloginws.png
+|  |
+|  |--farm_example.jpg
+|  |--favicon.ico
+|  |--reg_example.jpg
+|   
+|-js/
+|  |--customer.js
+|  
+|-database.rules.json
+|-deploy.sh
+|-emailverify.html
+|-farmmanager.html
+|-firebase.json
+|-index.html
+|-inprogress.html
+|-productmanager.html
+|-productoffer.html
+|-registration.html
+|-seller.html
+|-submit.sh
+|-team.html
+|-validate.sh
+```
 <hr>
 
 ## Funktionen der index.html
@@ -195,8 +272,6 @@ Erstellt einen User anhand der angebenden persönlichen Daten im Benutzerprofilf
 - `startSearch()` <br>
 Startet die Suche nach dem Suchterm, der auf der Landingpage eingegeben wurde und übergibt dieses Parameter an die productoffer.html
 und löst `performSearch()` aus.
-- `goToVerify()` <br>
-Leitet den User von der register.html auf die emailverify.html.
 - `function goToProfile()` <br>
 Löst bei Klick auf den Button "Fortfahren" auf der emailverify.html,
 die Funktion `checkEmailVerified()` aus.

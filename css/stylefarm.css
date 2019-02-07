@@ -1,5 +1,5 @@
 .backgroundHeadFarmManager {
-    background-image: url('img/productmanagerbackground.jpg');
+    background-image: url('img/backgrounds/productmanagerbackground.jpg');
     height: -webkit-fill-available;
     min-height: 900px;
     max-height: 1200px;
@@ -114,7 +114,7 @@
 
 @media (max-width: 825px) {
     .backgroundHeadFarmManager {
-        background-image: url('img/productmanagerbackground.jpg');
+        background-image: url('img/backgrounds/productmanagerbackground.jpg');
         height: -webkit-fill-available;
         min-height: 950px;
         padding: 0px;
@@ -128,7 +128,7 @@
 
 @media (max-width: 767px) {
     .backgroundHeadFarmManager {
-        background-image: url('img/productmanagerbackground.jpg');
+        background-image: url('img/backgrounds/productmanagerbackground.jpg');
         height: -webkit-fill-available;
         min-height: 1475px;
         padding: 0px;

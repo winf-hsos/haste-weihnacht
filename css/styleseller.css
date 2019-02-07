@@ -1,15 +1,16 @@
 .container-fluid {
-    background-image: url('img/productmanagerbackground.jpg');
+    background-image: url('img/backgrounds/productmanagerbackground.jpg');
     height: -webkit-fill-available;
     padding: 0px;
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
+    min-height: 800px;
     max-height: 1200px;
 }
 
 .container-fluid.productmanager {
-    background-image: url('img/productmanagerbackground.jpg');
+    background-image: url('img/backgrounds/productmanagerbackground.jpg');
     height: -webkit-fill-available;
     padding: 0px;
     background-repeat: no-repeat;
@@ -76,7 +77,7 @@
 
 @media (max-width: 756px) {
     .container-fluid {
-        background-image: url('img/productmanagerbackgroundmr.jpg');
+        background-image: url('img/backgrounds/productmanagerbackgroundmr.jpg');
         height: -webkit-fill-available;
         padding: 0px;
         background-repeat: no-repeat;
@@ -96,7 +97,7 @@
 
 @media (max-width: 756px) {
     .container-fluid.productmanager {
-        background-image: url('img/productmanagerbackgroundmr.jpg');
+        background-image: url('img/backgrounds/productmanagerbackgroundmr.jpg');
         height: -webkit-fill-available;
         padding: 0px;
         background-repeat: no-repeat;

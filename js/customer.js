@@ -51,7 +51,6 @@
    $('#loginModal').modal('hide');
    document.getElementById("logoutHidden").removeAttribute("hidden");
    document.getElementById("loginHidden").setAttribute("hidden", "true");
-   /*document.getElementById("userPicMin").removeAttribute("hidden");*/
    document.getElementById("registerHidden").setAttribute("hidden", "true");
    document.getElementById("myAccountHidden").removeAttribute("hidden");
    document.getElementById("homeHidden").removeAttribute("hidden");
@@ -186,9 +185,7 @@
   window.open("productoffer.html?q=" + inputSearch.value, "_self")
  }
 
- function goToVerify() {
-  window.location.replace("/emailverify.html");
- }
+ 
 
  function goToProfile() {
   checkEmailVerified();

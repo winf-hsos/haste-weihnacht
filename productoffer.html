@@ -84,7 +84,7 @@
                     </select>
 
                     </div>
-                    <div class="col-md-4 searchButtonPosition"><button onclick="startSearch()" class="btn btn-danger ">Los</button> &nbsp;|&nbsp;
+                    <div class="col-md-4 searchButtonPositionOffer"><button onclick="startSearch()" class="btn btn-danger ">Los</button> &nbsp;|&nbsp;
                         <a class="linkStyleShowAllProducts" onclick="readProducts()" href="#">Alle Produkte anzeigen</a>
                     </div>
                  
@@ -157,10 +157,10 @@
                                     <h5>Social Login</h5>
                                 </div>
                                 <div class="col-md-12 socialLogin">
-                                    <img class="socialSymbols" src="img/facebookloginws.png" alt="pic">&nbsp;&nbsp;&nbsp;&nbsp;
-                                    <img class="socialSymbols" src="img/twitterloginws.png" alt="pic"> &nbsp;&nbsp;&nbsp;&nbsp;
-                                    <img class="socialSymbols" src="img/instaloginws.png" alt="pic"> &nbsp;&nbsp;&nbsp;&nbsp;
-                                    <img class="socialSymbols" src="img/googleloginws.png" alt="pic"> &nbsp;&nbsp;&nbsp;&nbsp;
+                                    <img class="socialSymbols" src="img/social_logos/facebookloginws.png" alt="pic">&nbsp;&nbsp;&nbsp;&nbsp;
+                                    <img class="socialSymbols" src="img/social_logos/twitterloginws.png" alt="pic"> &nbsp;&nbsp;&nbsp;&nbsp;
+                                    <img class="socialSymbols" src="img/social_logos/instaloginws.png" alt="pic"> &nbsp;&nbsp;&nbsp;&nbsp;
+                                    <img class="socialSymbols" src="img/social_logos/googleloginws.png" alt="pic"> &nbsp;&nbsp;&nbsp;&nbsp;
                                 </div>
                             </div>
                             <div class="modal-footer">
@@ -275,7 +275,7 @@
 
                     var anzahlbilder = 18;
                     var zufallszahl = Math.floor(Math.random() * (anzahlbilder - start + 1)) + start;
-                    var zufallsbild = "img/" + zufallszahl + ".jpeg";
+                    var zufallsbild = "img/product_examples/" + zufallszahl + ".jpeg";
                     return zufallsbild
                 }
 

@@ -66,7 +66,7 @@
                     <h3 class="lph"><span class="lph" style="color:#CC0C0C">dein</span>&nbsp;|&nbsp;Profil</h3>
                 </div>
                 <div class="row justify-content-center">
-                    <div class="col-md-6 regPicture"><img class="img-fluid regPic" src="img/regpic.jpg" alt="pic">
+                    <div class="col-md-6 regPicture"><img class="img-fluid regPic" src="img/reg_example.jpg" alt="pic">
                         <div class="col-md-12">
                             <form role="form">
                                 <div class="form-group">
@@ -122,7 +122,7 @@
                                 <p id="profileDataSaved" style="color:#CC0C0C"></p>
                                 &nbsp;&nbsp;
                                 <button type="button" class="btn btn-danger" onclick="createUser()">Speichern</button> &nbsp;&nbsp;
-                                <button type="button" class="btn btn-danger" onclick="goToVerify()">Weiter</button>
+                                <button type="button" id="nextButton" class="btn btn-danger" onclick="checkEmailVerified()">Weiter</button>
                             </div>
                         </div>
                     </div>
@@ -162,10 +162,10 @@
                         <h5>Social Login</h5>
                     </div>
                     <div class="col-md-12 socialLogin">
-                        <img class="socialSymbols" src="img/facebookloginws.png" alt="pic">&nbsp;&nbsp;&nbsp;&nbsp;
-                        <img class="socialSymbols" src="img/twitterloginws.png" alt="pic"> &nbsp;&nbsp;&nbsp;&nbsp;
-                        <img class="socialSymbols" src="img/instaloginws.png" alt="pic"> &nbsp;&nbsp;&nbsp;&nbsp;
-                        <img class="socialSymbols" src="img/googleloginws.png" alt="pic"> &nbsp;&nbsp;&nbsp;&nbsp;
+                        <img class="socialSymbols" src="img/social_logos/facebookloginws.png" alt="pic">&nbsp;&nbsp;&nbsp;&nbsp;
+                        <img class="socialSymbols" src="img/social_logos/twitterloginws.png" alt="pic"> &nbsp;&nbsp;&nbsp;&nbsp;
+                        <img class="socialSymbols" src="img/social_logos/instaloginws.png" alt="pic"> &nbsp;&nbsp;&nbsp;&nbsp;
+                        <img class="socialSymbols" src="img/social_logos/googleloginws.png" alt="pic"> &nbsp;&nbsp;&nbsp;&nbsp;
                     </div>
                 </div>
                 <div class="modal-footer">
@@ -205,7 +205,7 @@
                 getUser();
 
                 $('#loginModal').modal('hide');
-                checkEmailVerified();
+                
             }
             else {
                 $('#loginModal').modal({ backdrop: 'static' });

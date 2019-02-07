@@ -87,9 +87,6 @@
                         <!-- When this is clicked, register() is called -->
                         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
                         <button id="btnRegister" onclick="register()" class="btn btn-danger" role="button">Registrieren</button>
-                        
-                        <!-- When this is clicked, sendVerificationEMail() is called -->
-                        <a id="btnVerify" onclick="sendVerificationEMail()" href="/accManage.html" class="btn btn-danger" hidden>Email verifizieren</a>
                     </div>
                 </div>
             </div>
@@ -126,10 +123,10 @@
                             <h5>Social Login</h5>
                         </div>
                         <div class="col-md-12 socialLogin">
-                            <img class="socialSymbols" src="img/facebookloginws.png" alt="pic">&nbsp;&nbsp;&nbsp;&nbsp;
-                            <img class="socialSymbols" src="img/twitterloginws.png" alt="pic"> &nbsp;&nbsp;&nbsp;&nbsp;
-                            <img class="socialSymbols" src="img/instaloginws.png" alt="pic"> &nbsp;&nbsp;&nbsp;&nbsp;
-                            <img class="socialSymbols" src="img/googleloginws.png" alt="pic"> &nbsp;&nbsp;&nbsp;&nbsp;
+                            <img class="socialSymbols" src="img/social_logos/facebookloginws.png" alt="pic">&nbsp;&nbsp;&nbsp;&nbsp;
+                            <img class="socialSymbols" src="img/social_logos/twitterloginws.png" alt="pic"> &nbsp;&nbsp;&nbsp;&nbsp;
+                            <img class="socialSymbols" src="img/social_logos/instaloginws.png" alt="pic"> &nbsp;&nbsp;&nbsp;&nbsp;
+                            <img class="socialSymbols" src="img/social_logos/googleloginws.png" alt="pic"> &nbsp;&nbsp;&nbsp;&nbsp;
                         </div>
                     </div>
                     <div class="modal-footer">
@@ -167,7 +164,7 @@
                                 </div>
                                 <div class="form-group1">
                                     <label for="inputPLZHof"></label>
-                                    <input type="number" class="form-control" id="inputPLZHof" placeholder="PLZ" />
+                                    <input type="text" class="form-control" id="inputPLZHof" placeholder="PLZ" />
                                 </div>
                                 <hr>
                             </div>
@@ -189,7 +186,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-6 farmPicture"><img class="img-fluid farmPic" src="img/farmpiceg.jpg" alt="pic">
+                    <div class="col-md-6 farmPicture"><img class="img-fluid farmPic" src="img/farm_example.jpg" alt="pic">
                         <div class="col-md-12 farmForm">
                             <div class="form-group">
                                 <label for="inputStory"></label>
@@ -300,7 +297,6 @@
                 getLocationUser();
          
             $('#loginModal').modal('hide');
-            checkEmailVerified();
             }
             else {
                 $('#loginModal').modal({ backdrop: 'static' });

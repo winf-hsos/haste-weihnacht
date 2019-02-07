@@ -125,10 +125,10 @@
                             <h5>Social Login</h5>
                         </div>
                         <div class="col-md-12 socialLogin">
-                            <img class="socialSymbols" src="img/facebookloginws.png" alt="pic">&nbsp;&nbsp;&nbsp;&nbsp;
-                            <img class="socialSymbols" src="img/twitterloginws.png" alt="pic"> &nbsp;&nbsp;&nbsp;&nbsp;
-                            <img class="socialSymbols" src="img/instaloginws.png" alt="pic"> &nbsp;&nbsp;&nbsp;&nbsp;
-                            <img class="socialSymbols" src="img/googleloginws.png" alt="pic"> &nbsp;&nbsp;&nbsp;&nbsp;
+                            <img class="socialSymbols" src="img/social_logos/facebookloginws.png" alt="pic">&nbsp;&nbsp;&nbsp;&nbsp;
+                            <img class="socialSymbols" src="img/social_logos/twitterloginws.png" alt="pic"> &nbsp;&nbsp;&nbsp;&nbsp;
+                            <img class="socialSymbols" src="img/social_logos/instaloginws.png" alt="pic"> &nbsp;&nbsp;&nbsp;&nbsp;
+                            <img class="socialSymbols" src="img/social_logos/googleloginws.png" alt="pic"> &nbsp;&nbsp;&nbsp;&nbsp;
                         </div>
                     </div>
                     <div class="modal-footer">
@@ -144,7 +144,7 @@
             <!--Add Product-->
             <div class="col-md-4" id="addNewProduct">
                 <a onClick="newProduct()" role="button" aria-expanded="false">
-                    <img class="anbieter" id="addProduct" src="img/addproduct.svg" class="rounded-circle" href="#" />
+                    <img class="anbieter" id="addProduct" src="img/acc_management_icons/addproduct.svg" class="rounded-circle" href="#" />
                 </a>
                 <h2 class="lph"><span class="lph" style="color:#CC0C0C">Produkt</span>&nbsp;|&nbsp;hinzufügen</h2>
                 <p>
@@ -192,7 +192,7 @@
             <!--Change Product-->
             <div class="col-md-4" id="productChangeOverview">
                 <a onClick="goToProductChangeOrDelete()" role="button" aria-expanded="false">
-                        <img class="anbieter" id="changeProduct" src="img/productchange.svg" class="rounded-circle" href="#" />
+                        <img class="anbieter" id="changeProduct" src="img/acc_management_icons/productchange.svg" class="rounded-circle" href="#" />
                 </a>
                 <h2 class="lph"><span class="lph" style="color:#CC0C0C">Produkt</span>&nbsp;|&nbsp;ändern</h2>
                 <p>
@@ -203,13 +203,13 @@
             <div class="col-md-4" id="productChangeOrDelete" hidden>
                 <div class="row justify-content-center">
                     <a onClick="changeAProduct()" role="button" aria-expanded="false">
-                        <img class="anbieter" id="productChange" src="img/change.svg" class="rounded-circle" href="#" />
+                        <img class="anbieter" id="productChange" src="img/acc_management_icons/change.svg" class="rounded-circle" href="#" />
                     </a>
                 </div>
                 <p class="headParagraphModal"><span class="headParagraphModal" style="color:#CC0C0C">Produkt</span>&nbsp;|&nbsp;ändern</p>
                 <div class="row justify-content-center">
                     <a onClick="deleteAProduct()" role="button" aria-expanded="false">
-                        <img class="anbieter" id="productDelete" src="img/delete.svg" class="rounded-circle" href="#" />
+                        <img class="anbieter" id="productDelete" src="img/acc_management_icons/delete.svg" class="rounded-circle" href="#" />
                     </a>
                 </div>
                 <p class="headParagraphModal"><span class="headParagraphModal" style="color:#CC0C0C">Produkt</span>&nbsp;|&nbsp;löschen</p>
@@ -276,7 +276,7 @@
             <!--Show Turnover-->
             <div class="col-md-4" id="showAllProducts">
                 <a onClick="showAllProduct()" role="button">
-                    <img class="anbieter" id="turnoverEuro" src="img/turnover.svg" class="rounded-circle" href="#" />
+                    <img class="anbieter" id="turnoverEuro" src="img/acc_management_icons/turnover.svg" class="rounded-circle" href="#" />
                 </a>
                 <h2 class="lph"><span class="lph" style="color:#CC0C0C">Produkt</span>&nbsp;|&nbsp;Übersicht</h2>
                 <p>
@@ -338,7 +338,6 @@
             console.dir(user);
             if (user) {
                 $('#loginModal').modal('hide');
-                checkEmailVerified();
             }
             else {
                 $('#loginModal').modal({ backdrop: 'static' });

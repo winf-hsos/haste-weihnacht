@@ -384,7 +384,7 @@
  }
 
  #mce-EMAIL.form-control {
-  background-image: url("img/mailIcon.png");
+  background-image: url("img/form_icons/mailIcon.png");
   background-repeat: no-repeat;
   background-position: left 10px center;
   background-size: 17px;
@@ -393,7 +393,7 @@
 
  #inputEmail.form-control,
  #userMail {
-  background-image: url("img/mailIcon.png");
+  background-image: url("img/form_icons/mailIcon.png");
   background-repeat: no-repeat;
   background-position: left 10px center;
   background-size: 17px;
@@ -401,7 +401,7 @@
  }
 
  #mce-LNAME.form-control {
-  background-image: url("img/nameIcon.png");
+  background-image: url("img/form_icons/nameIcon.png");
   background-repeat: no-repeat;
   background-position: left 10px center;
   background-size: 17px;
@@ -409,7 +409,7 @@
  }
 
  #mce-FNAME.form-control {
-  background-image: url("img/nameIcon.png");
+  background-image: url("img/form_icons/nameIcon.png");
   background-repeat: no-repeat;
   background-position: left 10px center;
   background-size: 17px;
@@ -417,7 +417,7 @@
  }
 
  #inputMobile.form-control {
-  background-image: url("img/mobileIcon.png");
+  background-image: url("img/form_icons/mobileIcon.png");
   background-repeat: no-repeat;
   background-position: left 10px center;
   background-size: 17px;
@@ -426,7 +426,7 @@
 
  #inputPassword.form-control,
  #userPassword {
-  background-image: url("img/passIcon.png");
+  background-image: url("img/form_icons/passIcon.png");
   background-repeat: no-repeat;
   background-position: left 10px center;
   background-size: 17px;
@@ -661,7 +661,7 @@
    left: 5px!important;
    margin-right: 15px!important;
    max-width: 310px!important;
-   min-width:0px!important;
+   min-width: 0px!important;
   }
  }
 
@@ -792,7 +792,7 @@
  }
 
  .backgroundHeadLanding {
-  background-image: url('img/banner5.jpg');
+  background-image: url('img/backgrounds/banner5.jpg');
   height: -webkit-fill-available;
   min-height: 850px;
   max-height: 1000px;
@@ -942,7 +942,7 @@
   width: 50px;
   height: 37.6px;
   cursor: pointer;
-  border: 1px solid #FFF;
+  border: 1px solid #CC0C0C;
   background: url('img/shoppingtrolley.svg')no-repeat center!important;
   background-color: #CC0C0C;
  }

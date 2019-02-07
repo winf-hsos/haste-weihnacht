@@ -1,5 +1,5 @@
 .container-fluid {
-    background-image: url('img/backproductoffer2.jpg');
+    background-image: url('img/backgrounds/backproductoffer.jpg');
     height: -webkit-fill-available;
     padding: 0px;
     min-height: 1900px;
@@ -23,8 +23,8 @@
     padding-bottom: 5px!important;
 }
 
-.searchButtonPosition {
-    top: 0px!important;
+.searchButtonPositionOffer {
+    padding-top: 25px;
 }
 
 .productOfferTitle {
