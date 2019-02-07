@@ -1,0 +1,166 @@
+.backgroundHeadFarmManager {
+    background-image: url('img/productmanagerbackground.jpg');
+    height: -webkit-fill-available;
+    min-height: 900px;
+    max-height: 1200px;
+    padding: 0px;
+    margin-left: -15px;
+    margin-right: -15px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.farmTransparentBox {
+    background-color: rgb(255, 255, 255, 0.8);
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-right: 0px!important;
+    padding-left: 0px!important;
+    border-radius: 15px;
+}
+
+.farmPic {
+    max-height: 400px;
+    max-width: 400px;
+    border-radius: 600px;
+}
+
+.farmPicture {
+    text-align: center;
+}
+
+.farmAdress {
+    padding-right: 0px;
+    padding-left: 0px;
+}
+
+.row#header {
+    width: 100%;
+    margin-left: 0px;
+    margin-right: 0px;
+    background-color: rgb(255, 255, 255, 0.8)!important;
+    padding-bottom: 0!important;
+    justify-content: center;
+    display: grid;
+}
+
+.row.farmForm {
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-top: 20px;
+}
+
+.ranking {
+    padding-top: 30px;
+}
+
+#navbarSupportedContent {
+    background-color: transparent!important
+}
+
+.farmData {
+    padding-left: 15px!important;
+    padding-right: 15px!important;
+}
+
+#hofPositionSaved {
+    margin-bottom: 0px;
+    padding-top: 10px;
+}
+
+.respnav-right {
+    background-color: transparent!important;
+}
+
+.bg-light {
+    background-color: transparent!important;
+    float: none!important;
+}
+
+@media (max-width: 575px) {
+    .navbar-nav.mr-auto.nav-right {
+        background-color: transparent!important;
+    }
+}
+
+@media (max-width: 575px) {
+    .respnav-right {
+        background-color: transparent!important;
+
+    }
+}
+
+@media (max-width: 575px) {
+    .row#header {
+        background-color: transparent!important;
+    }
+}
+
+@media (max-width: 575px) {
+    .bg-light {
+        background-color: rgb(255, 255, 255, 0.8)!important;
+    }
+}
+
+.transparentRanking {
+    justify-content: center;
+    display: flex;
+}
+
+#inputNachhaltigkeit {
+    margin-left: -4px;
+}
+
+@media (max-width: 825px) {
+    .backgroundHeadFarmManager {
+        background-image: url('img/productmanagerbackground.jpg');
+        height: -webkit-fill-available;
+        min-height: 950px;
+        padding: 0px;
+        margin-left: -15px;
+        margin-right: -15px;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-attachment: fixed;
+    }
+}
+
+@media (max-width: 767px) {
+    .backgroundHeadFarmManager {
+        background-image: url('img/productmanagerbackground.jpg');
+        height: -webkit-fill-available;
+        min-height: 1475px;
+        padding: 0px;
+        margin-left: -15px;
+        margin-right: -15px;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-attachment: fixed;
+    }
+}
+
+.rowBtnHof {
+    float: right;
+}
+
+@media (max-width: 907px) {
+    .farmPic {
+        max-height: 100%;
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 767px) {
+    .farmPic {
+        max-height: 400px;
+        max-width: 400px;
+    }
+}
+
+@media (max-width: 476px) {
+    .farmPic {
+        max-height: 100%;
+        max-width: 100%;
+    }
+}

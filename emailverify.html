@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1" shrink-to-fit="no">
+
+    <!--Sylesheets-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+    <link href="css/styleemailverify.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Amatic+SC|Kodchasan|Roboto" rel="stylesheet">
+    <link href="//cdn-images.mailchimp.com/embedcode/classic-10_7.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+
+    <!--Shortcuticon/favicon-->
+    <link rel="shortcut icon" href="img/favicon.ico">
+    <title>hasteWeihnacht by Hochschule Osnabrück</title>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="backgroundHeadLanding">
+            <div><br></div>
+            <div class="row" id="header">
+                <div class="col-md-4 mobileReadyCol-4">
+                    <h3>
+                        <a id="titlePage" href="index.html"> Hochschule Osnabrück |&nbsp;<span style="color:#CC0C0C">hasteWeihnacht</span> </a>
+                    </h3>
+                </div>
+            </div>
+        
+        <div class="row verifyBox">
+            <div class="col-md-8 box-transparent">
+                <div class="col-md-12 title">
+                    <h13>Bitte verifiziere deine Email, um fortfahren zu können...</h13>
+                    <p>Falls du keine Email erhalten hast klicke bitte <a class="verify" href="#" onclick="sendVerificationEMail()">hier</a>.
+                    </p>
+                    <div class="row">
+                        <div>
+                            <p>Ja, ich habe meine Email verfiziert:</p>
+                        </div>
+                    </div>
+                    <div class="row justify-content-center">
+                        <div><button onclick="goToProfile()" class="btn btn-danger ">Fortfahren</button></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+    <!--Script for using firebase-->
+    <script src="https://www.gstatic.com/firebasejs/5.5.2/firebase.js"></script>
+
+    <!-- Firebase Tools for simpler usage -->
+    <script src="https://cdn.jsdelivr.net/gh/winf-hsos/firebase-tools/src/firebase-tools.js"></script>
+
+    <script src="js/customer.js"></script>
+</body>
+
+</html>

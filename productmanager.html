@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1" shrink-to-fit="no">
+
+    <!--Sylesheets-->
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+    <link href="css/styleseller.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Amatic+SC|Kodchasan|Roboto" rel="stylesheet">
+    <link href="//cdn-images.mailchimp.com/embedcode/classic-10_7.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+
+    <!--Shortcuticon/favicon-->
+    <link rel="shortcut icon" href="img/favicon.ico">
+    <title>hasteWeihnacht by Hochschule Osnabrück</title>
+</head>
+
+<body>
+    <div class="container-fluid productmanager">
+        <div>
+            <div><br></div>
+            <div class="row" id="header">
+                <div class="col-md-12 respnav-right" id="navigationCol" hidden>
+                    <nav class="navbar navbar-expand-sm navbar-light bg-light">
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse respnav-right" id="navbarSupportedContent">
+                            <ul class="navbar-nav mr-auto nav-right">
+                                <li class="nav-item active"> <a id="loginHidden" data-toggle="modal" data-target="#loginModal" href="#">Einloggen</a>
+                                    <a id="homeHidden" href="index.html" hidden> Home</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a id="registerHidden" data-toggle="modal" data-target="#registerModal" href="#">Registrieren</a>
+                                    <a id="myAccountHidden" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="#" hidden>Mein Account
+                                <div class="dropdown-menu">
+                                    <a class="dropdown-item" href="registration.html">Mein Profil</a>
+                                    <a class="dropdown-item" href="seller.html">Accountmanagement</a>
+                                    <a class="dropdown-item" href="productoffer.html">Produktsuche</a>
+                                    <a class="dropdown-item" id="logoutHidden" onclick="logout()" href="#" hidden>
+                                    <hr>Ausloggen</a>
+                                </div>
+                                    </a>
+                                </li>
+                                <li class="nav-item"><a href="inprogress.html">Hilfe</a></li>
+                                <li class="nav-item"><a href="team.html">About us</a></li>
+                            </ul>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        <!-- Modal Register -->
+        <div class="modal fade" id="registerModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title col-md-12 modalTitleCenter">Registrierung</h5>
+                    </div>
+                    <div class="modal-body">
+                        <div>
+                            <h2 class="headParagraphModal"><span class="headParagraphModal" style="color:#CC0C0C">haste</span>&nbsp;|&nbsp;Interesse?</h2>
+                            <p class="lp">
+                                Dann registrier dich gleich, um Produkte kaufen oder verkaufen zu können. Sei dabei und unterstütze den Direktvertrieb von regionalen Produkten.
+                            </p>
+                        </div>
+                        <div class="col-md-12 modalFormPosition">
+                            <div class="formRegisterLogin">
+                                <div class="form-group">
+                                    <label for="inputEmail"></label>
+                                    <input type="email" class="form-control" id="inputEmail" placeholder="Enter E-Mail" />
+                                </div>
+                                <div class="form-group">
+                                    <label for="inputPassword"></label>
+                                    <input type="password" class="form-control" id="inputPassword" placeholder="Enter Password" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <!-- When this is clicked, register() is called -->
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button id="btnRegister" onclick="register()" class="btn btn-danger" role="button">Registrieren</button>
+
+                        <!-- When this is clicked, sendVerificationEMail() is called -->
+                        <a id="btnVerify" onclick="sendVerificationEMail()" href="/accManage.html" class="btn btn-danger" hidden>Email verifizieren</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Modal login -->
+        <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title col-md-12 modalTitleCenter">Login</h5>
+                    </div>
+                    <div class="modal-body">
+                        <div class="col-md-12" id="loginPic">
+                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="160" height="160" viewBox="0 0 100 100"><g><g transform="translate(50 50) scale(0.69 0.69) rotate(0) translate(-50 -50)" style="fill:#000000;"><svg fill="#000000" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" version="1.1" style="shape-rendering:geometricPrecision;text-rendering:geometricPrecision;image-rendering:optimizeQuality;" viewBox="0 0 229 285" x="0px" y="0px" fill-rule="evenodd" clip-rule="evenodd"><defs><style type="text/css"> .fil0 {fill:#000000} </style></defs><g><path class="fil0" d="M229 88c-3,-5 -33,-12 -57,2 -10,5 -16,11 -19,17 -4,-4 -8,-8 -13,-11 35,-20 71,-46 71,-91 0,-7 -11,-7 -11,0 0,27 -16,47 -34,61 3,-17 2,-36 0,-53 -1,-7 -11,-6 -10,1 2,19 3,43 -3,62 -7,5 -15,9 -22,13 -1,1 -1,1 -2,2 -5,-2 -9,-3 -14,-3 -5,0 -10,1 -15,3 0,-1 -1,-1 -1,-2 -8,-4 -16,-8 -23,-13 -6,-19 -4,-43 -2,-62 1,-7 -10,-8 -11,-1 -2,17 -3,36 0,53 -18,-14 -34,-34 -34,-61 0,-7 -10,-7 -10,0 0,45 36,71 70,91 -4,3 -9,7 -13,11 -3,-6 -9,-12 -19,-17 -24,-14 -54,-7 -56,-2 -3,5 6,34 30,48 7,4 14,7 20,7 -13,25 -20,53 -20,74 0,91 168,91 168,0 0,-21 -8,-49 -20,-74 5,0 12,-3 20,-7 24,-14 33,-43 30,-48zm-114 116c22,0 40,15 40,32 0,18 -18,32 -40,32 -23,0 -41,-14 -41,-32 0,-18 18,-32 41,-32zm0 8c9,0 17,5 17,11 0,6 -8,10 -17,10 -10,0 -18,-4 -18,-10 0,-6 8,-11 18,-11zm24 -54c-5,0 -10,5 -10,11 0,5 5,10 10,10 6,0 11,-5 11,-10 0,-6 -5,-11 -11,-11zm-49 0c6,0 10,5 10,11 0,5 -4,10 -10,10 -6,0 -10,-5 -10,-10 0,-6 4,-11 10,-11zm103 59c0,-21 -7,-46 -16,-64 -10,-23 -33,-60 -62,-60 -29,0 -52,37 -63,60 -8,18 -16,43 -16,64 0,84 157,84 157,0z"></path></g></svg></g>
+                            </g>
+                            </svg>
+                        </div>
+                        <!-- When this is clicked, validate() is called -->
+                        <p>Melde dich an, wenn du über ein Konto verfügst oder <a class="linkStyle" href="registration.html">registriere dich</a> jetzt kostenlos! </p>
+                        <div class="col-md-12 modalFormPosition">
+                            <form class="formRegisterLogin">
+
+                                <input type="email" name="usermail" id="userMail" class="form-control" aria-describedby="emailHelp" placeholder="Email" /><br>
+
+                                <input type="password" name="pswrd" id="userPassword" class="form-control" placeholder="Password" />
+                            </form>
+                        </div>
+                        <br>
+                        <div class="col-md-12 modalFormPosition">
+                            <p style="color:#CC0C0C" id="errorLogin"></p>
+                        </div>
+                        <p>Nutze alternativ die Anmeldung über Dritte:</p>
+                        <div class="col-md-12 headThirdParty">
+                            <h5>Social Login</h5>
+                        </div>
+                        <div class="col-md-12 socialLogin">
+                            <img class="socialSymbols" src="img/facebookloginws.png" alt="pic">&nbsp;&nbsp;&nbsp;&nbsp;
+                            <img class="socialSymbols" src="img/twitterloginws.png" alt="pic"> &nbsp;&nbsp;&nbsp;&nbsp;
+                            <img class="socialSymbols" src="img/instaloginws.png" alt="pic"> &nbsp;&nbsp;&nbsp;&nbsp;
+                            <img class="socialSymbols" src="img/googleloginws.png" alt="pic"> &nbsp;&nbsp;&nbsp;&nbsp;
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button onclick="clear()" type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button onclick="validate()" value="Login" class="btn btn-danger">Login</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br><br><br><br><br><br><br><br><br><br>
+        <div class="row productManagementOptions">
+
+            <!--Add Product-->
+            <div class="col-md-4" id="addNewProduct">
+                <a onClick="newProduct()" role="button" aria-expanded="false">
+                    <img class="anbieter" id="addProduct" src="img/addproduct.svg" class="rounded-circle" href="#" />
+                </a>
+                <h2 class="lph"><span class="lph" style="color:#CC0C0C">Produkt</span>&nbsp;|&nbsp;hinzufügen</h2>
+                <p>
+                    Füge ein von dir erschaffenes Produkt hinzu. Ganz egal ob Obst, Gemüse, Getränke oder kreative handmade Produkte.
+                </p>
+            </div>
+            
+            <div class="col-md-4" id="collapseAddNewProduct" hidden>
+                <div class="form-group">
+                    <label for="inputProductName">Produkt Name</label>
+                    <input type="text" class="form-control" id="inputProductName" placeholder="Produktnamen eingeben">
+                </div>
+                <div class="form-group">
+                    <label for="inputProductCategory">Produkt Kategorie</label>
+                    <select class="form-control" id="inputProductCategory">
+                        <option>Wähle eine Produkt Kategorie</option>
+                        <option>Getränke</option>
+                        <option>Obst & Gemüse</option>
+                        <option>Snacks</option>
+                        <option>Handmade Produkte</option>
+                        <option>Sonstige</option>
+                        </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="inputProductPrice">Preis (EUR)</label>
+                    <input type="text" class="form-control" id="inputProductPrice" placeholder="Produktpreis eingeben">
+                </div>
+                <div class="form-group">
+                    <label for="inputProductText">Beschreibe kurz dein Produkt</label>
+                    <textarea type="text" class="form-control" id="inputProductText" placeholder="Produktbeschreibung eingeben"></textarea>
+                </div>
+                
+                <!-- When this is clicked, saveProduct() is called -->
+                <button onclick="closeAddNewProduct()" type="button" class="btn btn-secondary">Close</button>
+                <button onclick="saveProduct()" class="btn btn-danger">Produkt anbieten</button>
+            </div>
+            
+            <div class="col-md-4" id="addNewProductConfirm" hidden>
+                <p class="pConfirmation">Produkt erfolgreich hinzugefügt!</p>
+                <button onclick="closeAddNewProductConfirmation()" class="btn btn-danger buttonConfirmation">Ok</button>
+
+            </div>
+
+            <!--Change Product-->
+            <div class="col-md-4" id="productChangeOverview">
+                <a onClick="goToProductChangeOrDelete()" role="button" aria-expanded="false">
+                        <img class="anbieter" id="changeProduct" src="img/productchange.svg" class="rounded-circle" href="#" />
+                </a>
+                <h2 class="lph"><span class="lph" style="color:#CC0C0C">Produkt</span>&nbsp;|&nbsp;ändern</h2>
+                <p>
+                    Ändere deine Angaben zu einem bereits hinzugefügten Produkt oder lösche es, falls du es dir anders überlegt hast.
+                </p>
+            </div>
+            
+            <div class="col-md-4" id="productChangeOrDelete" hidden>
+                <div class="row justify-content-center">
+                    <a onClick="changeAProduct()" role="button" aria-expanded="false">
+                        <img class="anbieter" id="productChange" src="img/change.svg" class="rounded-circle" href="#" />
+                    </a>
+                </div>
+                <p class="headParagraphModal"><span class="headParagraphModal" style="color:#CC0C0C">Produkt</span>&nbsp;|&nbsp;ändern</p>
+                <div class="row justify-content-center">
+                    <a onClick="deleteAProduct()" role="button" aria-expanded="false">
+                        <img class="anbieter" id="productDelete" src="img/delete.svg" class="rounded-circle" href="#" />
+                    </a>
+                </div>
+                <p class="headParagraphModal"><span class="headParagraphModal" style="color:#CC0C0C">Produkt</span>&nbsp;|&nbsp;löschen</p>
+                <div class="closeButtonProductChange">
+                    <button onclick="closeProductChangeOrDelete()" type="button" class="btn btn-secondary">Close</button>
+                </div>
+            </div>
+            <div class="col-md-4" id="collapseChangeOneProduct" hidden>
+                <div class="form-group">
+                    <label for="inputSelectItemToUpdate">Wähle das Produkt, welches du ändern möchtest</label>
+                    <select class="form-control" id="inputSelectItemToUpdate" onchange="productDropdownChanged()"></select>
+                </div>
+                <div class="form-group">
+                    <label for="inputUpdateProductName">Produkt Name</label>
+                    <input type="text" class="form-control" id="inputUpdateProductName" placeholder="Produktname ändern">
+                </div>
+                
+                <div class="form-group">
+                    <label for="inputUpdateProductCategory">Produkt Kategorie</label>
+                    <select class="form-control" id="inputUpdateProductCategory" placeholder="Wähle eine Produktategorie">
+                                           <option> Wähle eine Kategorie</option>
+                                        <option>Getränke</option>
+                                        <option>Obst & Gemüse</option>
+                                        <option>Snacks</option>
+                                        <option>Handmade Produkte</option>
+                                        <option>Sonstige</option>
+                                        </select>
+                </div>
+                <div class="form-group">
+                    <label for="inputUpdateProductPrice">Produkt Preis (EUR)</label>
+                    <input type="text" class="form-control" id="inputUpdateProductPrice" placeholder="Produktpreis ändern">
+                </div>
+                <div class="form-group">
+                    <label for="inputUpdateProductText">Produktbeschreibung</label>
+                    <textarea type="text" class="form-control" id="inputUpdateProductText" placeholder="Produktbeschreibung ändern"></textarea>
+                </div>
+                <div>
+                    <!-- When this is clicked, updateProduct() is called -->
+                    <button onclick="closeChangeAProduct()" type="button" class="btn btn-secondary">Close</button>
+                    <button onclick="backToProductChangeOrDeleteFromChange()" class="btn btn-danger">Zurück</button>
+                    <button onclick="updateProduct()" class="btn btn-danger">Ändern</button>
+                </div>
+            </div>
+            <div class="col-md-4" id="changeAProductConfirmation" hidden>
+                <p class="pConfirmation">Produkt erfolgreich geändert!</p>
+                <button onclick="closeChangeAProductConfirmation()" class="btn btn-danger buttonConfirmation">Ok</button>
+            </div>
+            <div class="col-md-4" id="collapseDeleteAProduct" hidden>
+                <div class="form-group">
+                    <label for="inputSelectItemToDelete">Wähle das Produkt aus, welches du löschen</label>
+                    <select class="form-control" id="inputSelectItemToDelete" onchange="productDropdownChanged()"></select>
+                </div>
+                
+                <!-- When this is clicked, deleteProduct() is called -->
+                <button onclick="closeDeleteAProduct()" type="button" class="btn btn-secondary">Close</button>
+                <button onclick="backToProductChangeOrDeleteFromDelete()" class="btn btn-danger">Zurück</button>
+                <button onclick="deleteProduct()" class="btn btn-danger">Löschen</button>
+            </div>
+            <div class="col-md-4" id="deleteAProductConfirmation" hidden>
+                <p class="pConfirmation">Produkt erfolgreich gelöscht!</p>
+                <button onclick="closeDeleteAProductConfirmation()" class="btn btn-danger buttonConfirmation">Ok</button>
+            </div>
+
+            <!--Show Turnover-->
+            <div class="col-md-4" id="showAllProducts">
+                <a onClick="showAllProduct()" role="button">
+                    <img class="anbieter" id="turnoverEuro" src="img/turnover.svg" class="rounded-circle" href="#" />
+                </a>
+                <h2 class="lph"><span class="lph" style="color:#CC0C0C">Produkt</span>&nbsp;|&nbsp;Übersicht</h2>
+                <p>
+                    Erhalte eine Übersicht über bereits verkaufte Produkte und sieh nach, wie viel du bereits umgesetzt hast.
+                </p>
+            </div>
+            
+            <div class="col-md-4" id="collapseShowAllProducts" hidden>
+                <div class="tableSettings">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th scope="col">Name</th>
+                                <th scope="col">Kategorie</th>
+                                <th scope="col">Preis</th>
+                                <th scope="col">Text</th>
+                                <th scope="col">Details</th>
+                            </tr>
+                        </thead>
+                        <tbody id="itemTable">
+                            <!-- Items show up here -->
+                        </tbody>
+                    </table>
+                </div>
+                <div class="closeButtonTurnover">
+                    <button onclick="closeShowAllProduct()" type="button" class="btn btn-secondary">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+    <!-- Firebase API -->
+    <script src="https://www.gstatic.com/firebasejs/5.0.3/firebase.js"></script>
+
+    <!-- Firebase Tools for simpler usage -->
+    <script src="https://cdn.jsdelivr.net/gh/winf-hsos/firebase-tools@0.85/src/firebase-tools.js"></script>
+    <script src="js/customer.js"></script>
+    <!-- Local load -->
+    <script src="https://www.gstatic.com/firebasejs/5.5.2/firebase.js"></script>
+
+    <script>
+        /* global firebasetools */
+
+        /* global config*/
+        firebasetools.initialize(config);
+        // Global variable for collection name
+
+        // Global variable to store products
+        firebasetools.onLoginChanged(loginChanged);
+        var currentUser;
+        /* global $*/
+        function loginChanged(user) {
+            currentUser = user;
+            console.dir(user);
+            if (user) {
+                $('#loginModal').modal('hide');
+                checkEmailVerified();
+            }
+            else {
+                $('#loginModal').modal({ backdrop: 'static' });
+            }
+        }
+
+        const currentDate = new Date();
+        var day = currentDate.getDate();
+        var month = currentDate.getMonth(); //Be careful! January is 0 not 1
+        var year = currentDate.getFullYear();
+
+        var dateString = day + "-" + (month + 1) + "-" + year;
+
+        var products = [];
+        // On load, get all products from the database and updater the view
+        firebasetools.getContentItems("products", updateView);
+
+        /*global addContentItems */
+        function saveProduct() {
+
+            var productName = document.getElementById("inputProductName").value;
+            var productCategory = document.getElementById("inputProductCategory").value;
+            var productPrice = document.getElementById("inputProductPrice").value;
+            var productText = document.getElementById("inputProductText").value;
+            var productDate = dateString;
+
+            console.log(productName);
+            console.log(productCategory);
+            console.log(productPrice);
+            console.log(productText);
+            console.log(productDate);
+            console.dir(currentUser)
+
+            var product = {
+                name: productName,
+                category: productCategory,
+                price: productPrice,
+                text: productText,
+                date: productDate,
+                userproductid: currentUser.uid,
+            }
+
+            firebasetools.addContentItem("products", product, updateView);
+            goToAddNewProductConfirmation()
+
+        }
+
+        function updateProduct() {
+            var productId = document.getElementById("inputSelectItemToUpdate").value;
+            var productName = document.getElementById("inputUpdateProductName").value;
+            var productCategory = document.getElementById("inputUpdateProductCategory").value;
+            var productPrice = document.getElementById("inputUpdateProductPrice").value;
+            var productText = document.getElementById("inputUpdateProductText").value;
+            var product = {
+                name: productName,
+                category: productCategory,
+                price: productPrice,
+                text: productText,
+
+            }
+            firebasetools.updateContentItem("products", productId, product, updateView);
+            goToChangeAProductCofirmation()
+        }
+
+        function deleteProduct() {
+
+            var productId = document.getElementById("inputSelectItemToDelete").value;
+            firebasetools.removeContentItem("products", productId, updateView);
+            goToDeleteAProductConfirmation();
+        }
+        
+        // Central function to update all UI components
+        function updateView() {
+
+            var updatedProducts = [];
+
+            firebase.firestore().collection("products").where("userproductid", "==", currentUser.uid).get().then(function(querySnapshot) {
+
+                querySnapshot.forEach(function(doc) {
+                    console.log(doc.id, " => ", doc.data());
+                    var product = doc.data();
+                    product.id = doc.id;
+                    updatedProducts.push(product);
+                });
+
+                console.dir(updatedProducts);
+
+                products = updatedProducts;
+                var dropDownItemsToUpdate = document.getElementById("inputSelectItemToUpdate");
+                var dropDownItemsToDelete = document.getElementById("inputSelectItemToDelete");
+                var itemTable = document.getElementById("itemTable");
+                clear(dropDownItemsToUpdate);
+                clear(dropDownItemsToDelete);
+                clear(itemTable);
+
+                updatedProducts.forEach((item) => {
+                    // Add item to drop down for update items
+                    var dropDownItem = document.createElement("option");
+                    dropDownItem.innerHTML = item.name;
+                    dropDownItem.setAttribute("value", item.id);
+                    dropDownItemsToUpdate.appendChild(dropDownItem);
+                    // Add item to drop down for delete items
+                    dropDownItem = document.createElement("option");
+                    dropDownItem.innerHTML = item.name;
+                    dropDownItem.setAttribute("value", item.id);
+                    dropDownItemsToDelete.appendChild(dropDownItem);
+                    // Add item to table
+                    var tableRow = document.createElement("tr");
+                    var colId = document.createElement("td");
+                    colId.innerHTML = item.id;
+                    var colName = document.createElement("td");
+                    colName.innerHTML = item.name;
+                    var colCategory = document.createElement("td");
+                    colCategory.innerHTML = item.category;
+                    var colPrice = document.createElement("td");
+                    colPrice.innerHTML = item.price;
+                    var colText = document.createElement("td");
+                    colText.innerHTML = item.text;
+                    var colDetailLink = document.createElement("td");
+                    colDetailLink.innerHTML = "<a href=\"detail.html?id=" + item.id + "&collection=" + products + "\">Detail</a>";
+
+                    tableRow.appendChild(colName);
+                    tableRow.appendChild(colCategory);
+                    tableRow.appendChild(colPrice);
+                    tableRow.appendChild(colText);
+                    tableRow.appendChild(colDetailLink);
+                    itemTable.appendChild(tableRow);
+                });
+
+            });
+
+            // Intialize the input fields for updates
+            productDropdownChanged();
+        }
+
+        // Function to update the dropdown and input field values
+        function productDropdownChanged() {
+            if (products.length > 0) {
+                var currentProductToUpdateId = document.getElementById("inputSelectItemToUpdate").value;
+                var selectedItem;
+                products.forEach((item) => {
+                    if (item.id == currentProductToUpdateId) {
+                        selectedItem = item;
+                    }
+                });
+                document.getElementById("inputUpdateProductName").value = selectedItem.name;
+                document.getElementById("inputUpdateProductCategory").value = selectedItem.category;
+                document.getElementById("inputUpdateProductPrice").value = selectedItem.price;
+                document.getElementById("inputUpdateProductText").value = selectedItem.text
+            }
+        }
+
+        function clear(domElement) {
+            /* Clear table */
+            while (domElement.firstChild) {
+                domElement.removeChild(domElement.firstChild);
+            }
+        }
+
+        function newProduct() {
+            document.getElementById("addNewProduct").setAttribute("hidden", "true");
+            document.getElementById("collapseAddNewProduct").removeAttribute("hidden");
+        }
+
+        function closeAddNewProduct() {
+            document.getElementById("collapseAddNewProduct").setAttribute("hidden", "true");
+            document.getElementById("addNewProduct").removeAttribute("hidden");
+        }
+
+        function goToAddNewProductConfirmation() {
+
+            document.getElementById("collapseAddNewProduct").setAttribute("hidden", "true");
+            document.getElementById("addNewProductConfirm").removeAttribute("hidden");
+        }
+
+        function closeAddNewProductConfirmation() {
+            document.getElementById("addNewProductConfirm").setAttribute("hidden", "true");
+            document.getElementById("addNewProduct").removeAttribute("hidden");
+        }
+
+        function goToProductChangeOrDelete() {
+            document.getElementById("productChangeOverview").setAttribute("hidden", "true");
+            document.getElementById("productChangeOrDelete").removeAttribute("hidden");
+        }
+
+        function closeProductChangeOrDelete() {
+            document.getElementById("productChangeOrDelete").setAttribute("hidden", "true");
+            document.getElementById("productChangeOverview").removeAttribute("hidden");
+        }
+
+        function changeAProduct() {
+            document.getElementById("productChangeOrDelete").setAttribute("hidden", "true");
+            document.getElementById("collapseChangeOneProduct").removeAttribute("hidden");
+        }
+
+        function goToChangeAProductCofirmation() {
+            document.getElementById("collapseChangeOneProduct").setAttribute("hidden", "true");
+            document.getElementById("changeAProductConfirmation").removeAttribute("hidden");
+        }
+
+        function closeChangeAProductConfirmation() {
+            document.getElementById("changeAProductConfirmation").setAttribute("hidden", "true");
+            document.getElementById("productChangeOverview").removeAttribute("hidden");
+        }
+
+        function closeChangeAProduct() {
+            document.getElementById("collapseChangeOneProduct").setAttribute("hidden", "true");
+            document.getElementById("productChangeOverview").removeAttribute("hidden");
+        }
+
+        function backToProductChangeOrDeleteFromChange() {
+            document.getElementById("collapseChangeOneProduct").setAttribute("hidden", "true");
+            document.getElementById("productChangeOrDelete").removeAttribute("hidden");
+        }
+
+        function deleteAProduct() {
+            document.getElementById("productChangeOrDelete").setAttribute("hidden", "true");
+            document.getElementById("collapseDeleteAProduct").removeAttribute("hidden");
+        }
+
+        function backToProductChangeOrDeleteFromDelete() {
+            document.getElementById("collapseDeleteAProduct").setAttribute("hidden", "true");
+            document.getElementById("productChangeOrDelete").removeAttribute("hidden");
+        }
+
+        function goToDeleteAProductConfirmation() {
+            document.getElementById("collapseDeleteAProduct").setAttribute("hidden", "true");
+            document.getElementById("deleteAProductConfirmation").removeAttribute("hidden");
+        }
+
+        function closeDeleteAProductConfirmation() {
+            document.getElementById("deleteAProductConfirmation").setAttribute("hidden", "true");
+            document.getElementById("productChangeOverview").removeAttribute("hidden");
+        }
+
+        function closeDeleteAProduct() {
+            document.getElementById("collapseDeleteAProduct").setAttribute("hidden", "true");
+            document.getElementById("productChangeOverview").removeAttribute("hidden");
+        }
+
+        function showAllProduct() {
+            document.getElementById("showAllProducts").setAttribute("hidden", "true");
+            document.getElementById("collapseShowAllProducts").removeAttribute("hidden");
+        }
+
+        function closeShowAllProduct() {
+            document.getElementById("collapseShowAllProducts").setAttribute("hidden", "true");
+            document.getElementById("showAllProducts").removeAttribute("hidden");
+        }
+    </script>
+</body>
+
+</html>

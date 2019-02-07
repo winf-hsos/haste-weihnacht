@@ -1,0 +1,204 @@
+.container-fluid {
+    background-image: url('img/productmanagerbackground.jpg');
+    height: -webkit-fill-available;
+    padding: 0px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    max-height: 1200px;
+}
+
+.container-fluid.productmanager {
+    background-image: url('img/productmanagerbackground.jpg');
+    height: -webkit-fill-available;
+    padding: 0px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    min-height: 900px;
+    max-height: 1200px;
+}
+
+.sellerOptions {
+
+    background-color: rgb(255, 255, 255, 0.8);
+    padding-bottom: 0px;
+    margin-right: 0px!important;
+    margin-left: 0px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.bg-light {
+    float: none!important;
+    display: grid;
+    justify-content: center;
+}
+
+.respnav-right {
+    background-color: transparent!important;
+}
+
+#navbarSupportedContent {
+    background-color: transparent!important
+}
+
+.row#header {
+    width: 100%;
+    margin-left: 0px;
+    margin-right: 0px;
+    padding-bottom: 0!important;
+}
+
+@media (min-width: 575px) {
+    .row#header {
+        background-color: rgb(255, 255, 255, 0.8);
+    }
+}
+
+.row.rowSellerOptions {
+    padding-bottom: 0px;
+    margin-right: 0px!important;
+    margin-left: 0px;
+}
+
+.row.productManagementOptions {
+    padding: 20px!important;
+    background-color: rgb(255, 255, 255, 0.8);
+}
+
+@media (max-width: 575px) {
+    .navbar-nav.mr-auto.nav-right {
+        background-color: transparent!important;
+    }
+}
+
+@media (max-width: 756px) {
+    .container-fluid {
+        background-image: url('img/productmanagerbackgroundmr.jpg');
+        height: -webkit-fill-available;
+        padding: 0px;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-attachment: fixed;
+        min-height: 1100px;
+    }
+}
+
+@media (max-width: 576px) {
+    .bg-light {
+        float: none!important;
+        display: flex!important;
+        justify-content: end;
+    }
+}
+
+@media (max-width: 756px) {
+    .container-fluid.productmanager {
+        background-image: url('img/productmanagerbackgroundmr.jpg');
+        height: -webkit-fill-available;
+        padding: 0px;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-attachment: fixed;
+        min-height: 1900px;
+    }
+}
+
+@media (max-width: 575px) {
+    .row.productManagementOptions {
+        padding: 20px!important;
+        background-color: rgb(255, 255, 255, 0.8);
+        position: absolute!important;
+    }
+}
+
+#productChangeOrDelete {
+    text-align: center;
+}
+
+.headParagraphModal {
+    margin-top: -30px!important;
+}
+
+#productDelete:hover {
+    animation: shake 1s cubic-bezier(.36, .07, .19, .97) both;
+    transform: translate3d(0, 0, 0);
+    backface-visibility: hidden;
+    perspective: 1000px;
+}
+
+@keyframes shake {
+    10%,
+    90% {
+        transform: translate3d(-1px, 0, 0);
+    }
+
+    20%,
+    80% {
+        transform: translate3d(2px, 0, 0);
+    }
+
+    30%,
+    50%,
+    70% {
+        transform: translate3d(-4px, 0, 0);
+    }
+
+    40%,
+    60% {
+        transform: translate3d(4px, 0, 0);
+    }
+}
+
+@media (max-width: 400px) {
+    .tableSettings {
+        overflow: auto;
+        max-height: 350px;
+        max-width: 250px;
+    }
+}
+
+.closeButtonTurnover {
+    padding-top: 20px;
+    text-align: right;
+}
+
+.tableSettings {
+    overflow: auto!important;
+    max-height: 350px!important;
+}
+
+.closeButtonProductChange {
+    text-align: center;
+    padding-top: 55px;
+}
+
+@media (max-width: 556px) {
+    #addNewProduct,
+    #collapseAddNewProduct,
+    #productChangeOverview,
+    #productChangeOrDelete,
+    #collapseChangeOneProduct,
+    #collapseDeleteAProduct,
+    #showAllProducts,
+    #collapseShowAllProducts {
+        padding-bottom: 50px!important;
+    }
+}
+
+.pConfirmation {
+    vertical-align: central;
+
+}
+
+#deleteAProductConfirmation,
+#changeAProductConfirmation,
+#addNewProductConfirm,
+#addNewProduct,
+#productChangeOverview,
+#showAllProducts {
+    text-align: center;
+    vertical-align: central;
+}

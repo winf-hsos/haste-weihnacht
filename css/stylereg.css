@@ -1,0 +1,112 @@
+.container-fluid {
+    background-image: url('img/banner5.jpg');
+    height: -webkit-fill-available;
+    max-height: 1200px;
+    min-height: 850px;
+    padding: 0px;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.row.registerForm {
+    padding-left: 250px;
+    padding-right: 250px;
+}
+
+.regAdress {
+    padding-left: 0!important;
+    Padding-right: 0!important;
+}
+
+.regAdressDataLeft {
+    padding-left: 0px;
+}
+
+.regAdressDataRight {
+    padding-right: 0px;
+}
+
+.createUserBtnRow {
+    padding-top: 20px;
+    float: right;
+}
+
+.regTransparentBox {
+    background-color: rgb(255, 255, 255, 0.8);
+    padding-top: 30px;
+    padding-bottom: 10px;
+    padding-right: 0px!important;
+    padding-left: 0px!important;
+    border-radius: 15px;
+}
+
+.regData {
+    padding-left: 15px!important;
+    padding-right: 15px!important;
+    margin-top: 50px;
+}
+
+.regPic {
+    max-height: 250px;
+    max-width: 400px;
+    border-radius: 600px;
+
+}
+
+.regPicture {
+    text-align: center;
+}
+
+
+@media (max-width: 960px) {
+    .row.registerForm {
+        padding-left: 100px!important;
+        padding-right: 100px!important;
+    }
+}
+
+
+@media (max-width: 550px) {
+    .row.registerForm {
+        padding-left: 50px!important;
+        padding-right: 50px!important;
+    }
+}
+
+@media (max-width: 375px) {
+    .row.registerForm {
+        padding-left: 25px!important;
+        padding-right: 25px!important;
+    }
+}
+
+@media (max-width: 768px) {
+    .registerTransparentBoxLeft,
+    .registerTransparentBoxRight {
+        border-radius: 15px!important;
+    }
+}
+
+@media (max-width: 768px) {
+    .container-fluid {
+
+        background-image: url('img/banner5.jpg');
+        height: -webkit-fill-available;
+        min-height: 1300px;
+        padding: 0px;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+}
+
+@media (max-width: 767px) {
+    .regAdressDataLeft {
+        padding-right: 0px;
+    }
+}
+
+@media (max-width: 767px) {
+    .regAdressDataRight {
+        padding-left: 0px;
+    }
+}

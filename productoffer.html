@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1" shrink-to-fit="no">
+
+    <!--Sylesheets-->
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+    <link href="css/styleproductoffer.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Amatic+SC|Kodchasan|Roboto" rel="stylesheet">
+    <link href="//cdn-images.mailchimp.com/embedcode/classic-10_7.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+
+    <!--Shortcuticon/favicon-->
+    <link rel="shortcut icon" href="img/favicon.ico">
+    <title>hasteWeihnacht by Hochschule Osnabrück</title>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="productBox">
+            <div><br></div>
+            <div class="row" id="header">
+                <div class="col-md-4 mobileReadyCol-4">
+                    <h3>
+                        <a id="titlePage" href="index.html"> Hochschule Osnabrück |&nbsp;<span style="color:#CC0C0C">hasteWeihnacht</span> </a>
+                    </h3>
+                </div>
+                <div class="col-md-8 respnav-right mobileReadyCol-8" id="navigationCol" hidden>
+                    <nav class="navbar navbar-expand-sm navbar-light bg-light">
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                    </button>
+                        <div class="collapse navbar-collapse respnav-right" id="navbarSupportedContent">
+                            <ul class="navbar-nav mr-auto nav-right">
+                                <li class="nav-item active"> <a id="loginHidden" data-toggle="modal" data-target="#loginModal" href="#">Einloggen</a>
+                                    <a id="homeHidden" href="index.html" hidden> Home</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a id="registerHidden" data-toggle="modal" data-target="#registerModal" href="#">Registrieren</a>
+                                    <a id="myAccountHidden" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="#" hidden>Mein Account
+                                        <div class="dropdown-menu">
+                                            <a class="dropdown-item" href="registration.html">Mein Profil</a>
+                                    <a class="dropdown-item" href="seller.html">Accountmanagement</a>
+                                    <a class="dropdown-item" href="productoffer.html">Produktsuche</a>
+                                    <a class="dropdown-item" id="logoutHidden" onclick="logout()" href="#" hidden>
+                                        <hr>Ausloggen</a>
+                        </div>
+                        </a>
+                        </li>
+                        <li class="nav-item"><a href="inprogress.html">Hilfe</a></li>
+                        <li class="nav-item"><a href="team.html">About us</a></li>
+                        </ul>
+                </div>
+                </nav>
+            </div>
+        </div>
+
+        <div class="col-md-12">
+            <div class=" box-transparent-products">
+                <div class="row justify-content-center productOfferRow">
+                    <h8 class="productOfferTitle">Finde dein Produkt!</h8>
+                </div>
+                <div class="row justify-content-center">
+                    <div class="form-group col-md-4">
+                        <label for="inputUpdateProductName"></label>
+                        <input type="text" class="form-control" id="inputSearchProductName" placeholder="Suche dein Produkt...">
+                    </div>
+
+                    <div class="form-group col-md-4">
+                        <label for="inputUpdateProductCategory"></label>
+                        <select class="form-control" id="inputUpdateProductCategory" placeholder="Wähle eine Kategorie">
+                    <option>Wähle eine Kategorie</option>
+                    <option>Getränke</option>
+                    <option>Obst & Gemüse</option>
+                    <option>Snacks</option>
+                    <option>Handmade Produkte</option>
+                    <option>Sonstige</option>
+                    </select>
+
+                    </div>
+                    <div class="col-md-4 searchButtonPosition"><button onclick="startSearch()" class="btn btn-danger ">Los</button> &nbsp;|&nbsp;
+                        <a class="linkStyleShowAllProducts" onclick="readProducts()" href="#">Alle Produkte anzeigen</a>
+                    </div>
+                 
+                    <div class="card-deck" id="latestProductsDiv">
+                    </div>
+                </div>
+
+                <!-- Modal Register -->
+                <div class="modal fade" id="registerModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title col-md-12 modalTitleCenter">Registrierung</h5>
+                            </div>
+                            <div class="modal-body">
+                                <div>
+                                    <h2 class="headParagraphModal"><span class="headParagraphModal" style="color:#CC0C0C">haste</span>&nbsp;|&nbsp;Interesse?</h2>
+                                    <p class="lp">
+                                        Dann registrier dich gleich, um Produkte kaufen oder verkaufen zu können. Sei dabei und unterstütze den Direktvertrieb von regionalen Produkten.
+                                    </p>
+                                </div>
+                                <div class="col-md-12 modalFormPosition">
+                                    <div class="formRegisterLogin">
+                                        <div class="form-group">
+                                            <label for="inputEmail"></label>
+                                            <input type="email" class="form-control" id="inputEmail" placeholder="Enter E-Mail" />
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="inputPassword"></label>
+                                            <input type="password" class="form-control" id="inputPassword" placeholder="Enter Password" />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <!-- When this is clicked, register() is called -->
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                <button id="btnRegister" onclick="register()" class="btn btn-danger" role="button">Registrieren</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Modal login -->
+                <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title col-md-12 modalTitleCenter">Login</h5>
+                            </div>
+                            <div class="modal-body">
+                                <div class="col-md-12" id="loginPic">
+                                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="160" height="160" viewBox="0 0 100 100"><g><g transform="translate(50 50) scale(0.69 0.69) rotate(0) translate(-50 -50)" style="fill:#000000;"><svg fill="#000000" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" version="1.1" style="shape-rendering:geometricPrecision;text-rendering:geometricPrecision;image-rendering:optimizeQuality;" viewBox="0 0 229 285" x="0px" y="0px" fill-rule="evenodd" clip-rule="evenodd"><defs><style type="text/css"> .fil0 {fill:#000000} </style></defs><g><path class="fil0" d="M229 88c-3,-5 -33,-12 -57,2 -10,5 -16,11 -19,17 -4,-4 -8,-8 -13,-11 35,-20 71,-46 71,-91 0,-7 -11,-7 -11,0 0,27 -16,47 -34,61 3,-17 2,-36 0,-53 -1,-7 -11,-6 -10,1 2,19 3,43 -3,62 -7,5 -15,9 -22,13 -1,1 -1,1 -2,2 -5,-2 -9,-3 -14,-3 -5,0 -10,1 -15,3 0,-1 -1,-1 -1,-2 -8,-4 -16,-8 -23,-13 -6,-19 -4,-43 -2,-62 1,-7 -10,-8 -11,-1 -2,17 -3,36 0,53 -18,-14 -34,-34 -34,-61 0,-7 -10,-7 -10,0 0,45 36,71 70,91 -4,3 -9,7 -13,11 -3,-6 -9,-12 -19,-17 -24,-14 -54,-7 -56,-2 -3,5 6,34 30,48 7,4 14,7 20,7 -13,25 -20,53 -20,74 0,91 168,91 168,0 0,-21 -8,-49 -20,-74 5,0 12,-3 20,-7 24,-14 33,-43 30,-48zm-114 116c22,0 40,15 40,32 0,18 -18,32 -40,32 -23,0 -41,-14 -41,-32 0,-18 18,-32 41,-32zm0 8c9,0 17,5 17,11 0,6 -8,10 -17,10 -10,0 -18,-4 -18,-10 0,-6 8,-11 18,-11zm24 -54c-5,0 -10,5 -10,11 0,5 5,10 10,10 6,0 11,-5 11,-10 0,-6 -5,-11 -11,-11zm-49 0c6,0 10,5 10,11 0,5 -4,10 -10,10 -6,0 -10,-5 -10,-10 0,-6 4,-11 10,-11zm103 59c0,-21 -7,-46 -16,-64 -10,-23 -33,-60 -62,-60 -29,0 -52,37 -63,60 -8,18 -16,43 -16,64 0,84 157,84 157,0z"></path></g></svg></g>
+                                    </g>
+                                    </svg>
+                                </div>
+                                <!-- When this is clicked, validate() is called -->
+                                <p>Melde dich an, wenn du über ein Konto verfügst oder <a class="linkStyle" href="#">registriere dich</a> jetzt kostenlos! </p>
+                                <div class="col-md-12 modalFormPosition">
+                                    <form class="formRegisterLogin">
+                                        <input type="email" name="usermail" id="userMail" class="form-control" aria-describedby="emailHelp" placeholder="Email" /><br>
+                                        <input type="password" name="pswrd" id="userPassword" class="form-control" placeholder="Password" />
+                                    </form>
+                                </div>
+                                <br>
+                                <div class="col-md-12 modalFormPosition">
+                                    <p style="color:#CC0C0C" id="errorLogin"></p>
+                                </div>
+                                <p>Nutze alternativ die Anmeldung über Dritte:</p>
+                                <div class="col-md-12 headThirdParty">
+                                    <h5>Social Login</h5>
+                                </div>
+                                <div class="col-md-12 socialLogin">
+                                    <img class="socialSymbols" src="img/facebookloginws.png" alt="pic">&nbsp;&nbsp;&nbsp;&nbsp;
+                                    <img class="socialSymbols" src="img/twitterloginws.png" alt="pic"> &nbsp;&nbsp;&nbsp;&nbsp;
+                                    <img class="socialSymbols" src="img/instaloginws.png" alt="pic"> &nbsp;&nbsp;&nbsp;&nbsp;
+                                    <img class="socialSymbols" src="img/googleloginws.png" alt="pic"> &nbsp;&nbsp;&nbsp;&nbsp;
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button onclick="clear()" type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                <button onclick="validate()" value="Login" class="btn btn-danger">Login</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Modal Productinformation -->
+                <div class="modal fade" id="productModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                        <div id="productModalInfo"></div>
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title col-md-12 modalTitleCenter" id="productInfoTitle"></h5>
+                            </div>
+                            <div class="modal-body">
+                                <div class="row">
+                                    <div class="col-md-3">
+                                        <h10 class="productInfoModalHeadline">Kategorie:</h10>
+                                        <p id="productInfoCat"></p>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <h10 class="productInfoModalHeadline">Produktpreis</h10>
+                                        <p id="productInfoPrice"></p>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <h10 class="productInfoModalHeadline">Produkt wurde eingestellt am:</h10>
+                                        <p id="productInfoDate"></p>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <h10 class="productInfoModalHeadline">Produktbeschreibung:</h10>
+                                        <p id="productInfoDesc"></p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button onclick="clear()" type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                <button onclick="buy()" class="btn btn-danger">In den Einkaufswagen</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+        <!--Script for using firebase-->
+        <script src="https://www.gstatic.com/firebasejs/5.5.2/firebase.js"></script>
+
+        <!-- Firebase Tools for simpler usage -->
+        <script src="https://cdn.jsdelivr.net/gh/winf-hsos/firebase-tools/src/firebase-tools.js"></script>
+
+        <script src="js/customer.js"></script>
+
+        <!-- <script type="text/javascript" src="js/slide.js"></script>-->
+        <script>
+            /*global firebase*/
+            /*global firebasetools*/
+            /* Required code for using firestore */
+            // Das gehört dann in die search.html
+
+            var searchQuery = firebasetools.getURLParameterByName("q");
+            console.log("Search term was: " + searchQuery);
+            if (searchQuery != "") {
+                performSearch();
+            }
+            //----------------------------------------------------------------------------
+            else { readProducts(); }
+
+            {
+                var db = firebase.firestore();
+                const settings = { timestampsInSnapshots: true };
+                db.settings(settings);
+            }
+
+            var allProducts = [];
+
+            function readProducts() {
+                console.log("Reading Products from database.");
+                firebasetools.getContentItems("products", listProducts);
+            }
+
+            function listProducts(productCollection) {
+                console.dir(productCollection);
+
+                var sorted = firebasetools.sortArrayBy(productCollection, "time");
+                console.dir(sorted);
+
+                allProducts = sorted;
+
+                for (var i = 0; i < 20; i++) {
+                    createProductCard(sorted[i]);
+                }
+            }
+
+            function createProductCard(product) {
+                console.dir(product);
+
+                var div = document.querySelector('#latestProductsDiv');
+
+                var createProduktImg = function() {
+                    start = 1;
+
+                    var anzahlbilder = 18;
+                    var zufallszahl = Math.floor(Math.random() * (anzahlbilder - start + 1)) + start;
+                    var zufallsbild = "img/" + zufallszahl + ".jpeg";
+                    return zufallsbild
+                }
+
+                var html =
+                    '<div class="box">' +
+                    '<img class="artikelImg" src="' + createProduktImg() + '" alt="Card image cap">' +
+                    '<div class="box-content">' +
+                    '<h1 class="titleCard" id="productName">' + product.name + '</h1>' +
+                    '<p class="description" id="productText">' + product.price + ' €/kg </p>' +
+                    '<div class="row cardRow">' +
+                    '<a href="#" onclick="updateModal(\'' + product.id + '\')" data-toggle="modal" data-target="#productModal" class="read-more">Details</a>' +
+                    '<div class="col-md-4">' +
+                    '<button  onClick="buy()" class="buyBasket"></button></div></div></div>' +
+                    '<div class="card-footer">' +
+                    '<small class="text-muted">Eingestellt am &nbsp' + product.date + '</small>' +
+                    '</div>' +
+                    '</div>';
+
+                var cardDiv = document.createElement('div');
+                cardDiv.classList.add("col-md-2");
+                cardDiv.classList.add("latestProductsCol");
+                cardDiv.innerHTML = html;
+
+                div.appendChild(cardDiv);
+            }
+            //----------------------------------------------------------------------------
+
+            function updateModal(productId) {
+
+                // Hole products aus Array
+                var product;
+                for (var i = 0; i < allProducts.length; i++) {
+                    if (allProducts[i].id == productId)
+                        product = allProducts[i];
+                }
+
+                var productInfoModal =
+                    document.getElementById("productInfoTitle").innerText = product.name;
+                document.getElementById("productInfoDesc").innerText = product.text;
+                document.getElementById("productInfoDate").innerText = product.date;
+                document.getElementById("productInfoCat").innerText = product.category;
+                document.getElementById("productInfoPrice").innerText = product.price + "€/kg";
+            }
+
+            function performSearch() {
+                console.log("Performing search for >" + searchQuery + "<");
+
+                // 1. Hole alle Produkte aus der Datenbank
+                firebasetools.getContentItems("products", productsReady);
+
+                function productsReady(products) {
+                    // 2. Filtere in JS das Ergebnis auf Basis des Suchterms
+
+                    var searchResults = [];
+                    allProducts = searchResults;
+                    for (var i = 0; i < products.length; i++) {
+                        var name = products[i].name || "";
+                        var text = products[i].text || "";
+
+                        if (name.toLowerCase().includes(searchQuery.toLowerCase()) || text.toLowerCase().includes(searchQuery.toLowerCase())) {
+
+                            searchResults.push(products[i]);
+                        }
+                    }
+
+                    console.dir(searchResults);
+
+                    // Iterieren durch die Suchergebnisse und Erstellen eines
+                    // HTML Elements pro Ergebnis
+
+                    for (var i = 0; i < searchResults.length; i++) {
+                        createProductCard(searchResults[i]);
+                    }
+                }
+            }
+
+            /* global $*/
+            function buy() {
+                alert("Das Produkt wurde hinzugefügt");
+                $('#productModal').modal('hide');
+            }
+        </script>
+</body>
+
+</html>

@@ -1,0 +1,46 @@
+.container-fluid {
+    background-image: url('img/backproductoffer2.jpg');
+    height: -webkit-fill-available;
+    padding: 0px;
+    min-height: 1900px;
+    max-height: 2000px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.box-transparent-products {
+    position: relative;
+    border-radius: 15px;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding-left: 15px;
+    padding-right: 15px;
+    top: 50px;
+}
+
+.btn.btn-danger {
+    padding-top: 5px!important;
+    padding-bottom: 5px!important;
+}
+
+.searchButtonPosition {
+    top: 0px!important;
+}
+
+.productOfferTitle {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-size: 2.0rem;
+}
+
+.linkStyleShowAllProducts {
+    color: #CC0C0C;
+    font-size: 0.8rem;
+}
+
+.linkStyleShowAllProducts:hover {
+    color: #CC0C0C;
+    font-size: 0.8rem;
+    border-bottom: 0.8px solid #CC0C0C;
+    text-decoration: none;
+}
